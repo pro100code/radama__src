@@ -1,0 +1,42 @@
+Единицы измерения
+fr
+1fr - единица измерения только  в grid (равномерно распределяет пространство)
+2fr - высота строки или ширина колонки будут больше тех, что рядом
+grid-template-columns: 1fr 2fr 1fr; 
+grid-template-rows: 1fr 2fr 1fr;
+
+minmax(... , ...) - указывается минимальное(первое значение) и максимальное(второе)
+grid-template-columns: 1fr minmax(200px, 300px) 1fr; - при сужении экрана наша колонка будет уменьшиться от 300px до 200px
+grid-template-columns: 1fr minmax(200px, 1fr) 1fr; - может быть только в максимальном значении
+
+auto - колонка выстраивается в зависимости от контента
+grid-template-columns: auto 2fr 1fr; 
+
+fit-content(200px) - колонка увеличивается по мере заполнения, но макс-ширина 200px 
+
+repeat(3, 1fr) - для удобства (3 колонки размером 1fr)
+display: grid; - контейнер занимает уровень блока (width 100%)
+
+grid-template-columns: 200px 150px 300px; - задает количество колонок и их ширина
+grid-template-rows: 200px 300px; - задает количество строк и их высоту
+grid-template: repeat(3, 1fr) / repeat(3, 1fr); - сокращенная запись (сначала grid-template-rows: / grid-template-columns:)
+grid-area: header; - дает опознавание для класса
+grid-template-areas: 
+"header header"
+"side content"; - размешает имена классов так как укажем (в связке с grid-template-columns: и grid-template-rows:)
+
+grid-template: [start] "header header" 100px [row2]
+               [row2] "side content" [row-end] / 150px 1fr; - сокращенная запись
+
+
+grid-auto-rows: ; для управления неявного ряда(тот который выпал за сетку)
+grid-auto-columns: ;
+
+	grid-auto-flow: row; выстраивает grid элементы поочередно в ряды пока хватает места
+	grid-auto-flow: column; выстраивает grid элементы в одну строку создавая новые столбцы
+	grid-auto-flow: dense; заполняет все пространство по цирине и высоте, даже может менять блоки местами
+
+display: inline-grid; - ширина равна своему контенту (много свойств типа float и другие не действуют)
+
+
+

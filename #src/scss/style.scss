@@ -1,0 +1,16 @@
+@import "mixins-vars"; //===> Миксины, переменные
+@import "fonts"; //===> Шрифты (автоматическое подключение gulpfile.js)
+@import "fonts-google-icons"; //===> Google-fonts, font-icons
+@import "null"; //===> Обнуление
+@import "global"; //===> Общие параметры
+@import "forms"; //===> Подключение файлов UI-стилей, форм и готовых классов
+
+//===> Подключение файлов стилей страниц и элементов
+//@import "datepicker";
+//@import "lightgallery";
+//@import "pagging";
+@import "popup";
+@import "header";
+@import "footer";
+@import "page";
+@import "home";
