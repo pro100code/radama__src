@@ -1,6 +1,6 @@
 body {
 	color: $mainColor;
-	background: lighten(red, 30%);
+	background: $c_363636;
 	&._lock {
 		overflow: hidden;
 	}
