@@ -1,5 +1,6 @@
 body {
 	color: $mainColor;
+	background: lighten(red, 30%);
 	&._lock {
 		overflow: hidden;
 	}

@@ -1,5 +1,17 @@
-footer{}
-//====================================================================================================
-
-//====================================================================================================
-
+.footer {
+	@include adaptive-value("padding-top", 38, 10, 1);
+	@include adaptive-value("padding-bottom", 38, 10, 1);
+	@include adaptive-value("padding-right", 40, 5, 1);
+	@include adaptive-value("padding-left", 40, 5, 1);
+	background: $c_222222;
+	// .footer__container
+	&__container {
+	}
+	// .footer__body
+	&__body {
+		text-align: center;
+		font-weight: 300;
+		@include adaptive-value("font-size", 20, 12, 1);
+		color: $c_C7C7C7;
+	}
+}

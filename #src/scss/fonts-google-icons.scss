@@ -8,7 +8,9 @@
 
 // Пример удалить после подключения:
 // Roboto
-// @import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,700&display=swap&subset=cyrillic-ext");
+// Playfair Display
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap&subset=cyrillic-ext");
 
 //=====> Icons <========================================================================================================================================================
 @font-face {
@@ -29,11 +31,29 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 [class^="_icon-"],
 [class*=" _icon-"] {
 	&:before {
 		@extend %ic;
-		display: block;
+		display: inline-block;
 	}
+}
+
+._icon-logo:before {
+	content: "\e903";
+}
+._icon-arrow-1:before {
+	content: "\e900";
+}
+._icon-arrow-2:before {
+	content: "\e901";
+}
+._icon-location:before {
+	content: "\e902";
+}
+._icon-search:before {
+	content: "\e918";
+}
+._icon-work:before {
+	content: "\e919";
 }
