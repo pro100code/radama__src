@@ -1,0 +1,199 @@
+@use "sass:math";
+
+.presentation {
+	position: relative;
+	overflow: hidden;
+	// .presentation__bg-block
+	&__bg-block {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+	// .presentation__image-bg
+	&__image-bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+	// .presentation__gradient
+	&__gradient {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		background: rgba(#2f2f2f, 0.8);
+	}
+	// .presentation__container
+	&__container {
+		width: 100%;
+		position: relative;
+	}
+	// .presentation__boby
+	&__boby {
+		@include adaptive-value("padding-top", 257, 80, 1);
+		width: 100%;
+		height: 100vh;
+		min-height: 568px;
+		max-height: 900px;
+		position: relative;
+		z-index: 5;
+		@media (min-width: $md3+px) {
+			display: flex;
+		}
+		@media (max-width: 650px) {
+			// max-height: 800px;
+		}
+		@media (max-width: 600px) {
+			// min-height: 700px;
+		}
+		@media (max-width: 550px) {
+			max-height: 800px;
+		}
+	}
+	// .presentation__text-block
+	&__text-block {
+		display: flex;
+		flex-direction: column;
+
+		max-width: 635px;
+		height: 100%;
+	}
+	// .presentation__content
+	&__content {
+		flex: 0 0 100%;
+		height: 100%;
+		// @include adaptive-value("width", 650, 180, 1);
+		position: relative;
+		z-index: 6;
+	}
+	// .presentation__title
+	&__title {
+		@include adaptive-value("margin-bottom", 25, 15, 1);
+		font-family: $f_PlayfairDisplay;
+		font-weight: 900;
+		@include adaptive-value("font-size", 45, 25, 1);
+		line-height: math.div(60, 45) * 100%;
+		span {
+			@media (max-width: 600px) {
+				display: block;
+			}
+		}
+		// .presentation__title_block
+		&_block {
+		}
+		// .presentation__title_gold
+		&_gold {
+			@include adaptive-value("font-size", 45, 29, 1);
+			color: $c_DA9640;
+		}
+	}
+	// .presentation__subtitle
+	&__subtitle {
+		@include adaptive-value("margin-bottom", 30, 15, 1);
+		@include adaptive-value("font-size", 20, 15, 1);
+		line-height: math.div(28, 20) * 100%;
+		@media (max-width: $md2+px) {
+			max-width: 500px;
+		}
+	}
+	// .presentation__button
+	&__button {
+		margin: 0px 0px 40px 0px;
+	}
+	// .presentation__location
+	&__location {
+		flex: 1 1 auto;
+		justify-content: flex-end;
+		display: flex;
+		flex-direction: column;
+		padding: 0px 0px 30px 0px;
+		// .presentation__location_title
+		&_title {
+			margin: 0px 0px 15px 0px;
+			font-size: 16px;
+			@include adaptive-value("font-size", 16, 8, 1);
+			color: $c_CACACA;
+			@media (max-width: $md4+px) {
+				color: darken($c_DA9640, 20%);
+			}
+		}
+		// .presentation__location_adres
+		&_adres {
+			@include adaptive-value("font-size", 20, 10, 1);
+			line-height: math.div(28, 20) * 100%;
+			&::before {
+				margin: 0px 10px 0px 0px;
+				color: $c_DA9640;
+			}
+		}
+	}
+	// .presentation__girl
+	&__girl {
+		align-self: flex-end;
+		flex: 0 0 80%;
+		// height: 100%;
+		width: 100%;
+		max-width: 908px;
+		max-height: 919px;
+		position: relative;
+		z-index: 5;
+		@media (min-width: $maxWidth + px) {
+			transform: translate(-50%, 130px);
+		}
+		@media (min-width: $md1+px) {
+			transform: translate(-60%, 130px);
+		}
+		@media (max-width: $maxWidth + px) {
+			transform: translate(-50%, 130px);
+		}
+		@media (max-width: 1600px) {
+			transform: translate(-60%, 130px);
+		}
+		@media (max-width: $md1+px) {
+			position: absolute;
+			width: 100%;
+			right: 0;
+			bottom: -130px;
+			transform: translate(37%, 0);
+		}
+		// @media (max-width: $md2+px) {
+		// 	transform: translate(30%, -120px);
+		// }
+		@media (max-width: 850px) {
+			transform: translate(30%, -110px);
+		}
+		@media (max-width: $md3+px) {
+			// transform: translate(10%, -120px);
+		}
+		@media (max-width: 650px) {
+			transform: translate(35%, -120px);
+		}
+		@media (max-width: 550px) {
+			// width: 150%;
+			// transform: translate(30%, -120px);
+		}
+		@media (max-width: $md4+px) {
+			width: 100%;
+		}
+		@media (max-width: 410px) {
+			width: 125%;
+		}
+		@media (max-width: 350px) {
+			width: 150%;
+		}
+		img {
+			max-width: 100%;
+			// max-height: 919px;
+			@media (max-width: 550px) {
+			}
+		}
+	}
+}

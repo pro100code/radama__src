@@ -1,13 +1,42 @@
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .btn {
 	display: inline-flex;
-	padding: 0px 0px;
-	@media (min-width: 992px) {
-		&:hover {
+	align-items: center;
+	justify-content: center;
+	padding: 5px 0;
+	@include adaptive-value("width", 204, 97, 1);
+	@include adaptive-value("height", 59, 28, 1);
+	font-weight: 700;
+	@include adaptive-value("font-size", 20, 10, 1);
+	transition: all 0.3s ease 0s;
+	// .btn_gold{
+	&_gold {
+		background: $c_DA9640;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $c_2E2E2E;
+			}
+		}
+	}
+	// .btn_black
+	&_black {
+		background: $c_2E2E2E;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $c_DA9640;
+			}
 		}
 	}
 	&._fw {
 		width: 100%;
+	}
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptive-value("width", 194, 93, 1);
+		@include adaptive-value("height", 49, 24, 1);
+		border: 1px solid $mainColor;
 	}
 }
 //</BUTTONS>===============================================================================================================

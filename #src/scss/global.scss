@@ -23,6 +23,12 @@ body {
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
 	padding: 0 15px;
+	// ._container_fluid
+	&_fluid {
+		margin: 0 auto;
+		padding: 0 15px;
+		max-width: 1920px;
+	}
 	// @media (max-width: $md1+px) {
 	// 	max-width: 970px;
 	// }

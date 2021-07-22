@@ -114,8 +114,8 @@
 			}
 			&::after {
 				content: "";
-				width: 22.45px;
-				height: 22.45px;
+				width: 26px;
+				height: 26px;
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -208,6 +208,12 @@
 		font-size: 18px;
 		@media (max-width: $md3+px) {
 			font-size: 30px;
+		}
+		@media (any-hover: hover) {
+			transition: all 0.3s ease 0s;
+			&:hover {
+				color: $c_DA9640;
+			}
 		}
 		// .menu__link_title
 		&_title {
